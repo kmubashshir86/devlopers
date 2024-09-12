@@ -220,3 +220,16 @@ nav ul li a.active {
     font-weight: bold; /* Optional: Make the text bold to emphasize the active link */
 }
 
+/* styles.css */
+
+/* Default link styles */
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* default color for links */
+    padding: 10px;
+}
+
+/* Active link style */
+nav ul li a.active {
+    color: blue; /* color for the active link */
+}
