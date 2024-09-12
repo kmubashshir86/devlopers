@@ -213,3 +213,37 @@ body.dark-mode nav ul li .dropdown-content {
 body.dark-mode nav ul li .dropdown-content li a:hover {
     background-color: #333;
 }
+
+
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.upper-bar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.upper-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.upper-bar li {
+    margin-right: 20px;
+}
+
+.upper-bar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.upper-bar .active a {
+    font-weight: bold;
+    color: #ff0; /* Highlight color for the active item */
+    border-bottom: 2px solid #ff0; /* Optional: underline for active item */
+}
