@@ -217,15 +217,34 @@ body.dark-mode nav ul li .dropdown-content li a:hover {
 
 
 
-
-/* General styles for the header */
+/* General header styles */
 header {
-    background-color: #800080; /* Purple color for normal mode */
-    color: white; /* Text color */
+    background: linear-gradient(135deg, #800080, #4b0082); /* Gradient from purple to indigo */
+    color: white;
     padding: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Navigation links */
+/* Gradient banners effect */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4b0082, #800080);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Navigation styles */
+nav {
+    position: relative;
+    z-index: 2;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -253,7 +272,7 @@ nav ul li a.active {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #800080; /* Purple color for dropdown */
+    background: linear-gradient(135deg, #4b0082, #800080); /* Gradient for dropdown */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -272,8 +291,12 @@ nav ul li a.active {
 
 /* Dark mode styles */
 body.dark-mode header {
-    background-color: #ffffff; /* White color for dark mode */
-    color: black; /* Text color */
+    background: linear-gradient(135deg, #ffffff, #d3d3d3); /* Light gradient for dark mode */
+    color: black;
+}
+
+body.dark-mode header::before {
+    background: linear-gradient(135deg, #d3d3d3, #ffffff);
 }
 
 body.dark-mode nav ul li a {
@@ -281,7 +304,7 @@ body.dark-mode nav ul li a {
 }
 
 body.dark-mode .dropdown-content {
-    background-color: #ffffff; /* White color for dropdown in dark mode */
+    background: linear-gradient(135deg, #d3d3d3, #ffffff); /* Light gradient for dropdown in dark mode */
 }
 
 body.dark-mode .dropdown-content li a {
