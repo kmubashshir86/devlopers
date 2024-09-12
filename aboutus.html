@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Website</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <style>
+        /* Additional styling for the about Us section */
+        .contact-us {
+            font-size: 24px; /* Reduced font size */
+            text-align: left; /* Align text to the left */
+            margin-top: 1.0in; /* Move the text up */
+            margin-left: 0.5in; /* Shift it close to the left edge */
+            color: #333; /* Good looking color */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effect */
+            padding: 10px; /* Add padding for better visual effect */
+            border-radius: 10px; /* Circular edges */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        /* Styling for when Contact Us is selected */
+        .contact-us.selected {
+            background-color: #f0f0f0; /* Light gray background when selected */
+        }
+
+        /* Styling for selected navigation link */
+        nav ul li a.active {
+            color: #007bff; /* Highlight color for the selected link */
+            font-weight: bold; /* Make the selected link bold */
+            border-bottom: 2px solid #007bff; /* Underline effect */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#"><img src="null.jpg" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" id="services-link">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#">PPC</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="about-us-link">About Us</a></li>
+                <li><a href="#" id="contact-us-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dark-mode-toggle">
+        <img id="mode-icon" src="https://static.vecteezy.com/system/resources/previews/018/931/088/original/cartoon-sun-icon-png.png" alt="Mode Icon">
+    </div>
+
+    <div class="contact-us" id="contact-us-section">
+        <h2About us</h2>
+        <p>blah blah blah.</p>
+    </div>
+
+    <script>
+        document.getElementById('home-link').addEventListener('click', function() {
+            // Remove 'active' class from any other nav links
+            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the Home link
+            this.classList.add('active');
+
+            // Redirect to the Home page
+            window.location.href = this.href;
+        });
+
+        document.getElementById('contact-us-link').addEventListener('click', function() {
+            // Remove 'selected' class from any other elements
+            document.querySelectorAll('.contact-us').forEach(el => el.classList.remove('selected'));
+
+            // Add 'selected' class to the Contact Us section
+            document.getElementById('contact-us-section').classList.add('selected');
+
+            // Remove 'active' class from any other nav links
+            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the Contact Us link
+            this.classList.add('active');
+        });
+    </script>
+
+    <script src="aboutus.js"></script>
+</body>
+</html>
 
