@@ -1,0 +1,82 @@
+/* General styles for the header */
+header {
+    background-color: #800080; /* Purple color for normal mode */
+    color: white; /* Text color */
+    padding: 10px;
+}
+
+/* Navigation links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Active link style */
+nav ul li a.active {
+    font-weight: bold;
+}
+
+/* Dropdown menu styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #800080; /* Purple color for dropdown */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li a {
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dark mode styles */
+body.dark-mode header {
+    background-color: #ffffff; /* White color for dark mode */
+    color: black; /* Text color */
+}
+
+body.dark-mode nav ul li a {
+    color: black;
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #ffffff; /* White color for dropdown in dark mode */
+}
+
+body.dark-mode .dropdown-content li a {
+    color: black;
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle img {
+    width: 30px;
+    height: 30px;
+}
