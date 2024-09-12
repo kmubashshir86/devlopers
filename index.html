@@ -5,47 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing Website</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Navigation bar styles */
-        nav ul li a {
-            text-decoration: none;
-            color: white; /* Set the default color for the navigation text to white */
-            padding: 10px;
-            transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for hover and active effects */
-        }
-
-        /* Active link style */
-        nav ul li a.active {
-            color: #007bff; /* Highlight color for the selected link */
-            font-weight: bold; /* Make the selected link bold */
-            border-bottom: 2px solid #007bff; /* Underline effect for the active link */
-        }
-
-        /* Dropdown menu styles */
-        .dropdown-content {
-            display: none; /* Initially hide the dropdown content */
-            position: absolute;
-            background-color: #333;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block; /* Show the dropdown content when hovering */
-        }
-
-        .dropdown-content a {
-            color: white; /* Set the color for dropdown links */
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757; /* Background color on hover */
-        }
-    </style>
 </head>
 <body>
 
@@ -76,23 +35,6 @@
     <div class="dark-mode-toggle">
         <img id="mode-icon" src="https://static.vecteezy.com/system/resources/previews/018/931/088/original/cartoon-sun-icon-png.png" alt="Mode Icon">
     </div>
-
-    <script>
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-
-                // Remove 'active' class from all links
-                document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-
-                // Add 'active' class to the clicked link
-                this.classList.add('active');
-
-                // Redirect to the page
-                window.location.href = this.href;
-            });
-        });
-    </script>
 
     <script src="script.js"></script>
 </body>
