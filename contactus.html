@@ -50,45 +50,46 @@
                         <li><a href="#">PPC</a></li>
                     </ul>
                 </li>
-                <li><a href="#" id="about-us-link">About Us</a></li>
+                <!-- Updated to add navigation to About Us page -->
+                <li><a href="aboutus.html" id="about-us-link">About Us</a></li>
                 <li><a href="career.html" id="career-link">Career</a></li>
                 <li><a href="ourstory.html" id="our-story-link">Our Story</a></li>
-                <!-- Make the Contact Us link active by default -->
                 <li><a href="#" id="contact-us-link" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Make the Contact Us section selected by default -->
+    <div class="dark-mode-toggle">
+        <img id="mode-icon" src="https://static.vecteezy.com/system/resources/previews/018/931/088/original/cartoon-sun-icon-png.png" alt="Mode Icon">
+    </div>
+
     <div class="contact-us selected" id="contact-us-section">
         <h2>Contact Us</h2>
         <p>Feel free to reach out to us for any inquiries or support.</p>
     </div>
 
     <script>
+        // Home link event listener
         document.getElementById('home-link').addEventListener('click', function() {
-            // Remove 'active' class from any other nav links
             document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the Home link
             this.classList.add('active');
-
-            // Redirect to the Home page
             window.location.href = this.href;
         });
 
+        // Contact Us link event listener
         document.getElementById('contact-us-link').addEventListener('click', function() {
-            // Remove 'selected' class from any other elements
             document.querySelectorAll('.contact-us').forEach(el => el.classList.remove('selected'));
-
-            // Add 'selected' class to the Contact Us section
             document.getElementById('contact-us-section').classList.add('selected');
-
-            // Remove 'active' class from any other nav links
             document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the Contact Us link
             this.classList.add('active');
+        });
+
+        // About Us link event listener
+        document.getElementById('about-us-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+            window.location.href = this.href; // Redirect to aboutus.html
         });
     </script>
 
