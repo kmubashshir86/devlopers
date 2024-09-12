@@ -240,3 +240,24 @@ body.dark-mode nav ul li .dropdown-content li a:hover {
     color: #d3a0e6; /* Adjust color as needed */
 }
 
+/* Add these styles to your existing styles.css */
+
+.top-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#mode-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.company-name {
+    font-family: 'God', sans-serif; /* Replace 'God' with your desired font if available */
+    font-weight: bold;
+    color: #d3a0e6; /* Light purple color */
+}
