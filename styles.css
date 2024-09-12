@@ -213,19 +213,6 @@ body.dark-mode nav ul li .dropdown-content {
 body.dark-mode nav ul li .dropdown-content li a:hover {
     background-color: #333;
 }
-/* Existing styles */
 
-nav ul li a.active {
-    color: blue; /* Change this to the desired color for the active link */
-    font-weight: bold; /* Optional: Make the text bold to emphasize the active link */
-}
 
-/* styles.css */
-
-/* Default link styles */
-nav ul li a {
-    text-decoration: none;
-    color: #000; /* default color for links */
-    padding: 10px;
-}
 
