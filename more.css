@@ -216,125 +216,34 @@ body.dark-mode nav ul li .dropdown-content li a:hover {
 
 
 
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* General header styles */
-header {
-    background: linear-gradient(135deg, #Dfb4fc, #a09fff); /* Gradient with light purple */
-    color: white;
+.upper-bar {
+    background-color: #333;
     padding: 10px;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Gradient banners effect */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #a09fff, #Dfb4fc); /* Gradient overlay effect */
-    opacity: 0.5;
-    z-index: 1;
-}
-
-/* Navigation styles */
-nav {
-    position: relative;
-    z-index: 2;
-}
-
-nav ul {
-    list-style: none;
+.upper-bar ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
 }
 
-nav ul li {
-    position: relative;
+.upper-bar li {
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: white;
+.upper-bar a {
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
 }
 
-/* Active link style */
-nav ul li a.active {
+.upper-bar .active a {
     font-weight: bold;
-}
-
-/* Dropdown menu styles */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: linear-gradient(135deg, #a09fff, #Dfb4fc); /* Gradient for dropdown */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content li a {
-    color: white;
-    padding: 10px;
-    display: block;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Dark mode styles */
-body.dark-mode header {
-    background: linear-gradient(135deg, #ffffff, #d3d3d3); /* Light gradient for dark mode */
-    color: black;
-}
-
-body.dark-mode header::before {
-    background: linear-gradient(135deg, #d3d3d3, #ffffff);
-}
-
-body.dark-mode nav ul li a {
-    color: black;
-}
-
-body.dark-mode .dropdown-content {
-    background: linear-gradient(135deg, #d3d3d3, #ffffff); /* Light gradient for dropdown in dark mode */
-}
-
-body.dark-mode .dropdown-content li a {
-    color: black;
-}
-
-/* Dark mode toggle button styles */
-.dark-mode-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-.dark-mode-toggle img {
-    width: 30px;
-    height: 30px;
+    color: #ff0; /* Highlight color for the active item */
+    border-bottom: 2px solid #ff0; /* Optional: underline for active item */
 }
