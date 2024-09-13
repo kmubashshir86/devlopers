@@ -1,37 +1,12 @@
-<!DOCTYPE html>
+
+
+       <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing Website</title>
     <link rel="stylesheet" href="more.css">
-    <style>
-        /* Additional styling for the About Us section */
-        .contact-us {
-            font-size: 24px; /* Reduced font size */
-            text-align: left; /* Align text to the left */
-            margin-top: 1.0in; /* Move the text up */
-            margin-left: -1in; /* Shift it close to the left edge */
-            margin-right: -1in; /* Extend to the right */
-            padding: 10px; /* Add padding for better visual effect */
-            background-color: #6a1b9a; /* Purple background color */
-            color: #fff; /* Text color for contrast */
-            border-radius: 10px; /* Circular edges */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-        }
-
-        /* Styling for when Contact Us is selected */
-        .contact-us.selected {
-            background-color: #ab47bc; /* Lighter purple background when selected */
-        }
-
-        /* Styling for selected navigation link */
-        nav ul li a.active {
-            color: #6a1b9a; /* New highlight color */
-            font-weight: bold; /* Make the selected link bold */
-            border-bottom: 2px solid #6a1b9a; /* Underline effect */
-        }
-    </style>
 </head>
 <body>
 
@@ -41,21 +16,22 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li class="dropdown">
-                    <a href="#" id="services-link">Services</a>
+                    <a href="#">Services</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Brand Promotion</a></li>
+                        <li><a href="#" >Brand Promotion</a></li>
                         <li><a href="#">Social Media Management</a></li>
-                        <li><a href="#">E-camera store Promotion</a></li>
-                        <li><a href="#">More</a></li>
+                        <li><a href="#">E-camera Store Promotion</a></li>
+                        <li><a href="more.html">More</a></li>
                     </ul>
                 </li>
-                <li><a href="#" id="about-us-link">About Us</a></li>
-                <li><a href="career.html" id="career-link">Career</a></li>
-                <li><a href="ourstory.html" id="our-story-link">Our Story</a></li>
-                <li><a href="Sector.html" id="Sector-link">Sector</a></li>
-                <li><a href="contactus.html" id="contact-us-link">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="ourstory.html">Our
+Story</a></li>
+<li><a href="Sector.html" id="Sector-link">Sector</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -64,50 +40,9 @@
         <img id="mode-icon" src="https://static.vecteezy.com/system/resources/previews/018/931/088/original/cartoon-sun-icon-png.png" alt="Mode Icon">
     </div>
 
-    <div class="contact-us" id="contact-us-section">
-        <h2>About Us</h2>
-        <p>blah blah blah.</p>
-    </div>
-
-    <script>
-        document.getElementById('home-link').addEventListener('click', function() {
-            // Remove 'active' class from any other nav links
-            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the Home link
-            this.classList.add('active');
-
-            // Redirect to the Home page
-            window.location.href = this.href;
-        });
-
-        document.getElementById('contact-us-link').addEventListener('click', function() {
-            // Remove 'selected' class from any other elements
-            document.querySelectorAll('.contact-us').forEach(el => el.classList.remove('selected'));
-
-            // Add 'selected' class to the Contact Us section
-            document.getElementById('contact-us-section').classList.add('selected');
-
-            // Remove 'active' class from any other nav links
-            document.querySelectorAll('nav ul li a').forEach(link => link.classList.remove('active'));
-
-            // Add 'active' class to the Contact Us link
-            this.classList.add('active');
-        });
-    </script>
-<style>
-    body {
-        background-image: url('images/your-image-name.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Your existing styles here */
-</style>
-
-    <script src="aboutus.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+  
