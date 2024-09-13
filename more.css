@@ -244,4 +244,26 @@ body.dark-mode nav ul li .dropdown-content li a:hover {
 }
 
 
+/* Add this to your existing CSS */
 
+/* Background container */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Dark mode styles */
+body.dark-mode #background {
+    background-image: url('dark.gif');
+}
+
+body:not(.dark-mode) #background {
+    background-image: url('light.gif');
+}
