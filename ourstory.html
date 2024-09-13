@@ -1,12 +1,75 @@
-
-
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing Website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the navigation bar */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around; /* Evenly space out the menu items */
+            background-color: #333;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #111;
+            border-bottom: 2px solid #007bff; /* Highlighted effect */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li a {
+            padding: 12px 16px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content li a:hover {
+            background-color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Styling for dark mode toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dark-mode-toggle img {
+            width: 40px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +83,7 @@
                 <li class="dropdown">
                     <a href="#">Services</a>
                     <ul class="dropdown-content">
-                        <li><a href="#" >Brand Promotion</a></li>
+                        <li><a href="#">Brand Promotion</a></li>
                         <li><a href="#">Social Media Management</a></li>
                         <li><a href="#">E-camera Store Promotion</a></li>
                         <li><a href="more.html">More</a></li>
@@ -29,7 +92,7 @@
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="career.html">Career</a></li>
                 <li><a href="ourstory.html">Our Story</a></li>
-<li><a href="Sector.html" id="Sector-link">Sector</a></li>
+                <li><a href="Sector.html" id="Sector-link">Sector</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -42,6 +105,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-  
