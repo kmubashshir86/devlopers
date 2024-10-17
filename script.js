@@ -80,3 +80,24 @@ papers.forEach(paper => {
   const p = new Paper();
   p.init(paper);
 });
+
+let isDragging = false;
+let startX, startY;
+
+element.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+element.addEventListener('touchmove', (e) => {
+  if (isDragging) {
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    // Update element position
+  }
+});
+
+element.addEventListener('touchend', () => {
+  isDragging = false;
+});
