@@ -1,54 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Drag Papers ❤️</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'><link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <title>Drag Papers ❤️</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap'>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .paper {
+            width: 200px;
+            height: 300px;
+            margin: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute; /* Added for draggable positioning */
+            cursor: move; /* Change cursor to indicate draggable item */
+        }
+        .paper img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<!-- A pen by Developer Rahul  -->
-<div class="paper heart">
 
-</div>
+<div class="paper heart"></div>
 
-  
 <div class="paper image">
-  <p> and I fallen in</p>
+    <p> and I fallen in</p>
     <p>Love with You 😍 </p>
-   <img src="images/1.jpeg" />
+    <img src="images/1.jpeg" />
 </div>
 
 <div class="paper image">
-  <p</p>
-  <img src="images/2.jpeg" />
+    <p></p>
+    <img src="images/2.jpeg" />
 </div>
 
 <div class="paper image">
-  <p>How can be </p>
-   <p> someone so cute ❤️ </p>
-
-  <img src="images/3.jpg" />
+    <p>How can be </p>
+    <p> someone so cute ❤️ </p>
+    <img src="images/3.jpg" />
 </div>
-
-
 
 <div class="paper red">
-<p class="p1"> and My Favorite</p>
-<p class="p2">Person 😍</p>
+    <p class="p1"> and My Favorite</p>
+    <p class="p2">Person 😍</p>
 </div>
 
 <div class="paper">
-<p class="p1">You are Cute </p>
-  <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
+    <p class="p1">You are Cute </p>
+    <p class="p1">Amazing <span style="color: red !important;">❤️</span></p>
 </div>
 
 <div class="paper">
-<p class="p1">Drag the papers to move!</p>
+    <p class="p1">Drag the papers to move!</p>
 </div>
-<!-- partial -->
-  <script  src="./script.js"></script>
+
+<script src="./script.js"></script>
+<script>
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+
+    const papers = document.querySelectorAll('.paper');
+
+    papers.forEach(paper => {
+        paper.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            initialLeft = paper.offsetLeft;
+            initialTop = paper.offsetTop;
+        });
+
+        paper.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                paper.style.left = `${initialLeft + dx}px`;
+                paper.style.top = `${initialTop + dy}px`;
+            }
+        });
+
+        paper.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Touch events for mobile
+        paper.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            initialLeft = paper.offsetLeft;
+            initialTop = paper.offsetTop;
+        });
+
+        paper.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                const dx = e.touches[0].clientX - startX;
+                const dy = e.touches[0].clientY - startY;
+                paper.style.left = `${initialLeft + dx}px`;
+                paper.style.top = `${initialTop + dy}px`;
+            }
+        });
+
+        paper.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+    });
+</script>
 
 </body>
 </html>
